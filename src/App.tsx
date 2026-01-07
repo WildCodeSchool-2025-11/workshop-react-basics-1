@@ -1,41 +1,29 @@
-import { useState } from 'react'
 import Hello from './Hello';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Avatar from './components/Avatar';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const Bart = {
+    image: "https://www.stickees.com/files/cartoon/the-simpsons/2239-bart-simpson-.png",
+    firstName: "Bart",
+    lastName: "Simpson",
+    city: "Springfield",
+    age: 15,
+  };
+  const Homer = {
+    image: "https://www.stickees.com/files/cartoon/the-simpsons/2246-homer-simpson-donut-2.png",
+    firstName: "Homer",
+    lastName: "Simpson",
+    city: "Springfield",
+    age: 55,
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + Yavuz</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-
      <Hello />
-      <Hello />
-       <Hello />
-        <Hello />
-         <Hello />
-          <Hello />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+     <Avatar firstname={Bart.firstName} lastanme={Bart.lastName} image={Bart.image} />
+     <Avatar firstname={Homer.firstName} lastanme={Homer.lastName} image={Homer.image} />
     </>
   )
 }

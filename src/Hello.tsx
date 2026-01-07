@@ -1,5 +1,5 @@
 function Hello() {
-    return <h1>Hello React World</h1>;
+    return <h1>React basics 2</h1>;
 }
 
 export default Hello;
